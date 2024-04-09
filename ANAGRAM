@@ -1,0 +1,52 @@
+
+Program to Check Two Strings Are Anagram Of Each Other in Java
+-------------------------------------------------------------
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("ENTER FIRST STRING");
+        char[] str1 = sc.next().toCharArray();
+        int size1=str1.length;
+        for (int i=0; i<size1;i++) {
+            System.out.print(str1[i]);
+        }
+        System.out.println();
+        System.out.println("ENTER SECOND STRING");
+        char[] str2= sc.next().toCharArray();
+        int size2= str2.length;
+        for (int i=0; i<size2;i++) {
+            System.out.print(str2[i]);
+        }
+        System.out.println();
+       Anagram a= new Anagram();
+       a.anagram(str1,str2);
+    }
+}
+-------------------------------------------------------------------
+import java.util.*;
+public class Anagram {
+    public static void anagram(char[] str1,char[] str2 ){
+        int flag=0;
+        int size1=str1.length;
+        int size2=str2.length;
+            if(size1==size2){
+                Arrays.sort(str1);
+                Arrays.sort(str2);
+                for(int i=0; i<size1; i++){
+                    if(str1[i]==str2[i]){
+                        flag=1;
+                    }
+                }
+                if(flag==1) {
+                    System.out.println("ANAGRAM");
+                }
+                else {
+                    System.out.println("NOT ANAGRAM");
+                }
+            }
+            else {
+                System.out.println("NOT ANAGRAM");
+            }
+    }
+}
