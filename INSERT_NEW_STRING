@@ -1,0 +1,28 @@
+Insert a String into another String in Java
+--------------------------------------------
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("ENTER A STRING");
+        Scanner sc= new Scanner(System.in);
+        String str= new String();
+        str=sc.nextLine();
+        System.out.println("ENTER A NEW STRING TO INSERT");
+        String insert= sc.nextLine();
+        System.out.println("ENTER INDEX");
+        int index= sc.nextInt();
+        InsertString i= new InsertString();
+
+        i.stringAdd(str,insert,index);
+    }
+}
+-----------------------------------------------------------------------------------------
+import java.util.*;
+public class InsertString {
+    void stringAdd(String str,String insertString,int index){
+        String  newString= str.substring(0,index+1)+ insertString+ str.substring(index+1);
+        System.out.println(newString);
+    }
+}
