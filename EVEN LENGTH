@@ -1,0 +1,26 @@
+Java program to print Even length words in a String
+---------------------------------------------------
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("ENTER A STRING");
+        Scanner sc= new Scanner(System.in);
+        String str= new String();
+        str=sc.nextLine();
+        EvenLength e=new EvenLength();
+        e.evenlength(str);
+    }
+}
+-------------------------------------------------------------------
+import  java.util.*;
+public class EvenLength {
+  public static void evenlength(String str){
+      for(String word: str.split(" ") ){
+            if(word.length()%2==0){
+                System.out.println(word);
+            }
+        }
+    }
+}
