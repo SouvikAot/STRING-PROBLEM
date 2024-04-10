@@ -1,0 +1,15 @@
+Java Program to Convert Enum to String
+-------------------------------------------
+
+import  java.io.*;
+enum Car{
+    Mercidies, Alto_800, Waganor, Swift_Desire;
+}
+public class EnumtoString {
+    public static void main(String[] args) {
+        System.out.println(Car.Mercidies.toString());
+        System.out.println(Car.Alto_800.toString());
+        System.out.println(Car.Waganor.toString());
+        System.out.println(Car.Swift_Desire.toString());
+    }
+}
