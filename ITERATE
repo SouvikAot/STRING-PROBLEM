@@ -1,0 +1,22 @@
+Java Program to Iterate Over Characters in String
+-------------------------------------------------
+public class IterateString {
+    void iterate(String str){
+        for(int i=0; i<str.length();i++){
+            System.out.print(str.charAt(i));
+            System.out.print(" ");
+        }
+    }
+}
+------------------------------------------
+import java.util.Scanner;
+
+public class MainString {
+    public static void main(String[] args) {
+        System.out.println("ENTER A STRING TO ITERATE");
+        Scanner sc= new Scanner(System.in);
+        String str= sc.nextLine();
+        IterateString i= new IterateString();
+        i.iterate(str);
+    }
+}
