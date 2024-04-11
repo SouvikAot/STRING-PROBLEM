@@ -1,0 +1,23 @@
+//Remove Leading Zeros From String in Java
+-------------------------------------------
+import java.util.Scanner;
+
+public class RemoveZero {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("ENTER A STRING");
+        String str= sc.nextLine();
+        char[] newStr= new char[str.length()];
+        int k=0;
+        for(int i=0; i<str.length();i++) {
+            if (str.charAt(i) != '0') {
+                newStr[k++] = str.charAt(i);
+            } else {
+
+            }
+        }
+        for (int i=0 ;i<k;i++){
+            System.out.print(newStr[i]);
+        }
+    }
+}
