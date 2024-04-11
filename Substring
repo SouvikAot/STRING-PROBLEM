@@ -1,0 +1,17 @@
+//Split a String into a Number of Substrings in Java
+//---------------------------------------------------
+import java.util.Scanner;
+
+public class SplitSubstring {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("ENTER A STRINg");
+        String str=sc.nextLine();
+        int i,j;
+        for (i=0;i<str.length();i++){
+            for(j=i+1;j<=str.length();j++){
+                System.out.println(str.substring(i,j));
+            }
+        }
+    }
+}
