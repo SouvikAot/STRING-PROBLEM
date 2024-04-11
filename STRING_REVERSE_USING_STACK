@@ -1,0 +1,27 @@
+//Java Program to Reverse a String using Stack
+//----------------------------------------------
+import java.util.Scanner;
+import java.util.Stack;
+import java.util.*;
+
+public class ReverseByStack {
+    public static void main(String[] args) {
+        Stack<Character> stack= new Stack<>();
+        System.out.println("ENTER A STRING");
+        Scanner sc = new Scanner(System.in);
+        String str= sc.nextLine();
+        for(int i=0; i<str.length();i++) {
+           char x= str.charAt(i);
+           stack.push(x);
+        }
+        char[] reverseStr= new char[str.length()];
+        int k=0;
+        while(!stack.isEmpty()){
+            reverseStr[k++]=stack.pop();
+        }
+        System.out.println("REVERSE STRING IS:");
+        for (int i=0; i<k;i++){
+            System.out.print(reverseStr[i]);
+        }
+    }
+}
