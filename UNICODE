@@ -1,0 +1,11 @@
+//Java Program to Determine the Unicode Code Point at Given Index in String
+//--------------------------------------------------------------------------
+public class Unicode {
+    public static void main(String[] args) {
+        String str="SOUVIK";
+        for(int i=0; i<str.length();i++){
+            int x= str.charAt(i);
+            System.out.println("UNICODE OF "+str.charAt(i)+"="+x);
+        }
+    }
+}
